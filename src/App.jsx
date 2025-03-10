@@ -1,11 +1,8 @@
-import Navbar from "./components/navbar"
-import Router from "./router/Router"
 
 function App() {
-
   return (
     <>
-      <Router />
+      <h1 className="text-4xl text-red-600 bg-slate-800 font-bold" >hello</h1>
     </>
   )
 }
