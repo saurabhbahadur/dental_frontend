@@ -13,6 +13,7 @@ export default {
         primary_text: "#ffffff",
         secondary_text: "#000000",
         hover_color: "#000000",
+        transparent_black:"#272727",
         icon : "#ff0000",
         accent_grad: {
           light: "#374151",

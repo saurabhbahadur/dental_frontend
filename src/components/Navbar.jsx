@@ -7,13 +7,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-primary_bg text-primary_text px-6 md:px-16 lg:px-24 fixed top-0 w-full z-50 shadow-md">
+    <nav className="bg-primary_bg  text-primary_text px-6 md:px-16 lg:px-24 fixed top-0 w-full z-50 shadow-md">
       <div className="container py-3 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold">Dental Care</div>
+        <div className="text-3xl font-bold">Dental Care</div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex  space-x-6">
           <Link to="/" className="hover:text-hover_color">Home</Link>
           <Link to="/why-us" className="hover:text-hover_color">Why Us</Link>
           <Link to="/meet-the-doctors" className="hover:text-hover_color">Meet The Doctors</Link>
