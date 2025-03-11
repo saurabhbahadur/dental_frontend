@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import { FaBars, FaPhone } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,7 +9,7 @@ const Navbar = () => {
   return (
     <>
       {/* Maine container */}
-      <nav className="bg-primary_bg text-primary_text px-6 md:px-16 lg:px-24 fixed top-0 w-full z-50 shadow-md">
+      <nav className="bg-primary_bg text-primary_text px-6 md:px-16 lg:px-24 top-0 w-full z-50 shadow-md">
         {/* sub main container  */}
         <div className="container py-3 flex justify-between items-center">
           {/* Logo container */}
@@ -23,14 +24,10 @@ const Navbar = () => {
               <a href="tel:9716820045"> 9716820045 </a>
             </div>
             {/* Navbar */}
-            <div className="hidden md:flex space-x-6" >
-              <a href="/">Home</a>
-              <a href="/whyus">Why Us</a>
-              <a href="/meetthedoctors">Meet The Doctors</a>
-              <a href="/procedures">Procedure</a>
-              <a href="gallery">Gallery</a>
-              <a href="/testimonials">Testimonials</a>
-              <a href="/contactus">Contact Us</a>
+            <div className=" md:flex space-x-6" >
+              <Link to="/">Home</Link>
+              <Link to="/my-services">My Services</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </div>
           </div>
         </div>
