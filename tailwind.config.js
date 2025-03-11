@@ -12,7 +12,7 @@ export default {
         golden_bg:"#ffe94e",
         primary_text: "#ffffff",
         secondary_text: "#000000",
-        hover_color: "#9ca3af",
+        hover_color: "#000000",
         icon : "#ff0000",
         accent_grad: {
           light: "#374151",
