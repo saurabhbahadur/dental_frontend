@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Firebase Secrets
+.env
+
+# Firebase Local Emulator Data (Agar Use Kar Rahe Ho)
+firebase-debug.log
+.firebase/
