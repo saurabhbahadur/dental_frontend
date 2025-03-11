@@ -7,10 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary_bg: "#000000",
+        primary_bg: "#28b9da",
         secondary_bg: "#1F2937",
+        golden_bg:"#ffe94e",
         primary_text: "#ffffff",
-        secondary_text: "#d1d5db",
+        secondary_text: "#000000",
         hover_color: "#9ca3af",
         icon : "#ff0000",
         accent_grad: {
