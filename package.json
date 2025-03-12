@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "dental_clinic",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,15 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "dental_clinic": "file:",
     "firebase": "^11.4.0",
-    "gh-pages": "^6.3.0",
-    "lucide-react": "^0.479.0",
-    "my-app": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-firebase-hooks": "^5.1.1",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.3.0",
-    "react-simple-typewriter": "^5.0.1"
+    "react-router-dom": "^7.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
