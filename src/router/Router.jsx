@@ -9,6 +9,7 @@ import Whyus from "../pages/Whyus";
 import Procedure from "../pages/Procedure";
 import Dashboard from "../admin/pages/Dashboard";
 import Login from "../admin/components/Login";
+import Footer from "../components/Footer";
 
 const ProtectedRoute = ({ children }) => {
   const [user, loading] = useAuthState(auth);
@@ -37,6 +38,7 @@ const Router = () => {
           }
         />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };
