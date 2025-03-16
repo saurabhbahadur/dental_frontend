@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "https://cdn.pixabay.com/photo/2017/06/10/20/39/avett-brothers-2390713_1280.jpg",
-  "https://cdn.pixabay.com/photo/2020/05/14/02/31/covid-19-5169689_1280.jpg",
-  "https://cdn.pixabay.com/photo/2017/09/06/20/36/doctor-2722941_1280.jpg",
+  "./public/madan_office.jpg",
+  "./public/equipments.jpg",
+  "./public/office.jpg",
+  "./public/reception.jpg",
 ];
 
 const ImageCarousel = () => {
@@ -31,7 +32,7 @@ const ImageCarousel = () => {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-[400px]">
+    <div className="relative w-full h-[650px]">
       <img
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}

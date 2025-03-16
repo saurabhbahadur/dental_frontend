@@ -11,8 +11,10 @@ const Navbar = () => {
     <nav className="bg-primary_bg  text-primary_text px-6 md:px-16 lg:px-24 fixed top-0 w-full z-50 shadow-md">
       <div className="container py-3 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-3xl font-bold">Dental Care</div>
-
+        <div className="flex items-center space-x-3">
+        <img src="./public/dental_logo.png" className="w-12 h-12 " alt="max dental care logo" />
+        <div className="text-3xl font-bold"> Max Dental Care</div>
+        </div>
         {/* Desktop Navigation */}
         <div className="hidden md:flex  space-x-6">
           <Link to="/" className="hover:text-hover_color">Home</Link>
@@ -42,6 +44,7 @@ const Navbar = () => {
           <Link to="/contact-us" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Contact Us</Link>
         </div>
       )}
+      <hr className="border-t-2 border-blue-950 " />
     </nav>
      
     </>

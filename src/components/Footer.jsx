@@ -22,20 +22,20 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-start mt-2 gap-2">
                 <FaMapMarkerAlt className="mt-1" />
-                <span>House no 856, DLF Colony, Sector 14, Gurugram, Haryana 122001</span>
+                <span>राजकीय मेडिकल कालेज गेट नं. 2 के सामने, जालौन, उरई 285001</span>
               </li>
               <li className="flex items-center mt-2 gap-2">
                 <FaPhone />
-                <span>+91-9811448281 / 01242306070</span>
+                <span><a href="tel:9927488027">+91 9927488027</a>/ <a href="tel:9716820045">9716820045</a> </span>
               </li>
               <li className="flex items-center mt-2 gap-2">
                 <FaEnvelope />
-                <span>drharishyadav@hotmail.com</span>
+                <span><a href="mailto:MaxdentalDrmadan@gmail.com">MaxdentalDrmadan@gmail.com</a> </span>
               </li>
               <li className="flex items-start mt-2 gap-2">
                 <FaClock className="mt-1" />
                 <span>
-                  Mon - Sat : <br /> 11:30 AM - 08:00 PM
+                  Mon - Sat : 10:00 AM - 08:00 PM <br /> Sun : 10:00 AM - 05:00 PM <br /> Thursday close
                 </span>
               </li>
             </ul>
@@ -52,7 +52,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} Dental Clinic. All rights reserved.</p>
+          <p className="text-gray-400">&copy; {new Date().getFullYear()} Max Dental Care. All rights reserved.</p>
           
           {/* Social Media Links */}
           <div className="flex space-x-4 my-4 md:my-0">
