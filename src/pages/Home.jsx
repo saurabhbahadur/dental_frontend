@@ -28,9 +28,9 @@ const Home = () => {
           {/* Image Container */}
           <div className="w-full  md:w-1/2">
             <img
-              src="/public/madan_office.jpg"
+              src="/madan_office.JPG"
               alt="Welcome Image"
-              className="w-full  shadow-lg border border-4 border-blue-950"
+              className="w-full  shadow-lg border-4 border-blue-950"
             />
           </div>
 

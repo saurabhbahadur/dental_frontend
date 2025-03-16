@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="container py-3 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-3">
-        <img src="./public/dental_logo.png" className="w-12 h-12 " alt="max dental care logo" />
+        <img src="/dental_logo.png" className="w-12 h-12 " alt="max dental care logo" />
         <div className="text-3xl font-bold"> Max Dental Care</div>
         </div>
         {/* Desktop Navigation */}

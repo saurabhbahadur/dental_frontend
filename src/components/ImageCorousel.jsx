@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "./public/madan_office.jpg",
-  "./public/equipments.jpg",
-  "./public/office.jpg",
-  "./public/reception.jpg",
+  "/madan_office.JPG",
+  "/equipments.JPG",
+  "/office.JPG",
+  "/reception.JPG",
 ];
 
 const ImageCarousel = () => {
