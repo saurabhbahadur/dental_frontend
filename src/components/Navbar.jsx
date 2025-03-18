@@ -19,10 +19,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex  space-x-6">
           <Link to="/" className="hover:text-hover_color">Home</Link>
-          <Link to="/why-us" className="hover:text-hover_color">Why Us</Link>
-          <Link to="/meet-the-doctors" className="hover:text-hover_color">Meet The Doctors</Link>
           <Link to="/procedure" className="hover:text-hover_color">Procedure</Link>
-          <Link to="/gallery" className="hover:text-hover_color">Gallery</Link>
           <Link to="/testimonials" className="hover:text-hover_color">Testimonials</Link>
           <Link to="/contact-us" className="hover:text-hover_color">Contact Us</Link>
         </div>
@@ -37,10 +34,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-primary_bg py-4 absolute top-full  left-0 w-full shadow-lg">
           <Link to="/" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/why-us" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Why Us</Link>
-          <Link to="/meet-the-doctors" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Meet The Doctors</Link>
           <Link to="/procedure" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Procedure</Link>
-          <Link to="/gallery" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Gallery</Link>
           <Link to="/testimonials" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Testimonials</Link>
           <Link to="/contact-us" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Contact Us</Link>
         </div>

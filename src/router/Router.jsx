@@ -5,7 +5,6 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Home from "../pages/Home";
 import ContactUs from "../pages/ContactUs";
 import Navbar from "../components/Navbar";
-import Whyus from "../pages/Whyus";
 import Procedure from "../pages/Procedure";
 import Dashboard from "../admin/pages/Dashboard";
 import Login from "../admin/components/Login";
@@ -25,7 +24,6 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/why-us" element={<Whyus />} />
         <Route path="/procedure" element={<Procedure />} />
         <Route path="/login" element={<Login />} />
 
