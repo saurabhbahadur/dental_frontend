@@ -1,12 +1,13 @@
 import React from 'react'
-import Form from '../components/Form'
+import ContactForm from '../components/ContactForm'
+
 
 const Procedure = () => {
     return (
         <>
             <div className='flex p-2'>
                 <div>
-                    <Form />
+                    <ContactForm/>
                 </div>
                 <div className='ml-10 block text-justify mr-11 mt-8' >
 

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 
 const images = [
-  "/madan_office.JPG",
-  "/equipments.JPG",
-  "/office.JPG",
-  "/reception.JPG",
+  "https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/iretqecsb4mjnsqktmdk",
+  "https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/uljkv3tr862bud8xuyvc",
+  "https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/bbe88sdotk7tkmmq5elj",
+  "https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/bmwqylbvhr3reht5nbgy",
 ];
+
 
 const ImageCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,6 +38,7 @@ const ImageCarousel = () => {
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
         className="w-full h-full object-cover"
+        loading="lazy"
       />
 
       <button

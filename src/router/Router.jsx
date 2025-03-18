@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes , Navigate } from "react-router-dom";
 import { auth } from "../../firebaseconfig";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Home from "../pages/Home";
-import Contactus from "../pages/Contactus";
+import ContactUs from "../pages/ContactUs";
 import Navbar from "../components/Navbar";
 import Whyus from "../pages/Whyus";
 import Procedure from "../pages/Procedure";
@@ -24,7 +24,7 @@ const Router = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact-us" element={<Contactus />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/why-us" element={<Whyus />} />
         <Route path="/procedure" element={<Procedure />} />
         <Route path="/login" element={<Login />} />

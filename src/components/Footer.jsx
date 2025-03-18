@@ -9,16 +9,23 @@ import {
   FaPhone,
   FaYoutube,
 } from "react-icons/fa";
+import FeedBackForm from "./FeedBackForm";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary_bg text-primary_text py-8">
+    
+    <footer className="bg-blue-950 text-primary_text ">
+      <div className="w-full flex justify-center mb-6 " >
+        <GoogleMapComponent/>
+      </div>
+      
       <div className="container mx-auto px-6 md:px-12 lg:px-20">
+        
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-6">
+        <div className="grid  grid-cols-1 md:grid-cols-2 gap-8 items-start mb-6">
           {/* Left Section */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Dental Clinic</h3>
+            <h3 className="text-2xl font-bold mb-4 underline">Max Dental Care</h3>
             <ul className="space-y-2">
               <li className="flex items-start mt-2 gap-2">
                 <FaMapMarkerAlt className="mt-1" />
@@ -43,16 +50,16 @@ const Footer = () => {
 
           {/* Right Section - Map */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Location</h3>
+            <h3 className="text-2xl font-bold mb-4 underline">Please Give Feedback</h3>
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <GoogleMapComponent />
+              <FeedBackForm/>
             </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
         <div className="border-t border-gray-600 pt-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-          <p className="text-gray-400">&copy; {new Date().getFullYear()} Max Dental Care. All rights reserved.</p>
+          <p className="text-gray-400">&copy; {new Date().getFullYear()} Max Dental Care. All rights reserved. <br /> Web Designed by <a href="https://saurabh-6e678.web.app/" className="hover:underline" >Saurabh</a></p>
           
           {/* Social Media Links */}
           <div className="flex space-x-4 my-4 md:my-0">
