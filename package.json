@@ -10,8 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "@react-google-maps/api": "^2.20.6",
     "dental_clinic": "file:",
     "firebase": "^11.4.0",
     "react": "^19.0.0",
