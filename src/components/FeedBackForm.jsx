@@ -1,101 +1,106 @@
 import React, { useState } from "react";
+import { db } from "../../firebaseconfig";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const FeedBackForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    number: "",
-    message: "",
-  });
-
-  const [errors, setErrors] = useState({});
-
-  const validateForm = () => {
-    let newErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
-    }
-
-    if (!formData.number.trim()) {
-      newErrors.number = "Phone number is required";
-    } else if (!/^\d{10}$/.test(formData.number)) {
-      newErrors.number = "Enter a valid 10-digit phone number";
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = "Message cannot be empty";
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+  const [formData, setFormData] = useState({ name: "", number: "", message: "" });
+  const [status, setStatus] = useState({ error: "", success: "", loading: false });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      alert("Feedback submitted successfully!");
+    setStatus({ error: "", success: "", loading: true });
+
+    if (!formData.name.trim() || !formData.number.trim() || !formData.message.trim()) {
+      setStatus({ error: "All fields are required.", success: "", loading: false });
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "feedbacks"), {
+        ...formData,
+        number: formData.number.trim(),
+        createdAt: serverTimestamp(),
+      });
+
+      setStatus({ error: "", success: "Feedback submitted successfully!", loading: false });
       setFormData({ name: "", number: "", message: "" });
-      setErrors({});
+    } catch (err) {
+      setStatus({ error: "Failed to submit your feedback. Please try again.", success: "", loading: false });
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 w-full">
-      {/* Name & Number in One Row */}
+    <form onSubmit={handleSubmit} className="h-full flex flex-col justify-between bg-white p-6 rounded-2xl space-y-4 w-full">
+      <h3 className="text-2xl font-bold mb-4 text-secondary_text underline">Please Give Feedback</h3>
+
+      {/* Name & Number Fields */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Name Field */}
-        <div>
-          {/* <label className="block text-primary_text font-medium">Name</label> */}
+        <div className="flex flex-col">
+          <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1">
+            Name
+          </label>
           <input
             type="text"
             name="name"
+            id="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter your name"
-            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
           />
-          {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
         </div>
 
-        {/* Phone Number Field */}
-        <div>
-          {/* <label className="block text-primary_text font-medium">Phone Number</label> */}
+        {/* Number Field */}
+        <div className="flex flex-col">
+          <label htmlFor="number" className="text-sm font-medium text-gray-700 mb-1">
+            Phone Number
+          </label>
           <input
             type="tel"
             name="number"
+            id="number"
             value={formData.number}
             onChange={handleChange}
-            placeholder="Enter your phone number"
-            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Enter your number"
+            className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
           />
-          {errors.number && <p className="text-red-500 text-sm">{errors.number}</p>}
         </div>
       </div>
 
-      {/* Message Field (Next Row) */}
-      <div>
-        {/* <label className="block text-primary_text font-medium">Message</label> */}
+      {/* Message Field */}
+      <div className="flex flex-col">
+        <label htmlFor="message" className="text-sm font-medium text-gray-700 mb-1">
+          Message
+        </label>
         <textarea
           name="message"
+          id="message"
           value={formData.message}
           onChange={handleChange}
           placeholder="Write your feedback here..."
-          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+          className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 resize-none"
           rows="4"
-        ></textarea>
-        {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+        />
       </div>
+
+      {/* Error & Success Messages */}
+      {status.error && <p className="text-red-500">{status.error}</p>}
+      {status.success && <p className="text-green-500">{status.success}</p>}
 
       {/* Submit Button */}
       <button
         type="submit"
-        className="w-full bg-primary_bg text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-300"
+        className={`bg-primary_bg w-full text-white px-6 py-2 rounded-full transition-transform duration-300 ${
+          status.loading ? "opacity-50 cursor-not-allowed" : "hover:scale-105"
+        }`}
+        disabled={status.loading}
       >
-        Submit Feedback
+        {status.loading ? "Sending..." : "Send"}
       </button>
     </form>
   );

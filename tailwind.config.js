@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         primary_bg: "#4CB7D5",
-        secondary_bg: "#1F2937",
+        secondary_bg: "#1a96b3",
+        third_bg:"#93cfe3",
         golden_bg:"#ffe94e",
         primary_text: "#ffffff",
         secondary_text: "#000000",

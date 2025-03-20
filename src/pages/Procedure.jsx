@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm'
 const Procedure = () => {
     return (
         <>
-            <div className='flex p-2'>
+            <div className='flex  pt-16 p-2'>
                 <div>
                     <ContactForm/>
                 </div>

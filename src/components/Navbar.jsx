@@ -21,7 +21,7 @@ const Navbar = () => {
           <Link to="/" className="hover:text-hover_color">Home</Link>
           <Link to="/procedure" className="hover:text-hover_color">Procedure</Link>
           <Link to="/testimonials" className="hover:text-hover_color">Testimonials</Link>
-          <Link to="/contact-us" className="hover:text-hover_color">Contact Us</Link>
+          <a href="#contact_us" className="hover:text-hover_color">Contact Us</a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -36,7 +36,7 @@ const Navbar = () => {
           <Link to="/" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Home</Link>
           <Link to="/procedure" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Procedure</Link>
           <Link to="/testimonials" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Testimonials</Link>
-          <Link to="/contact-us" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Contact Us</Link>
+          <a href="#contact_us" className="block py-2 px-6 hover:text-hover_color" onClick={() => setIsOpen(false)}>Contact Us</a>
         </div>
       )}
       <hr className="border-t-2 border-blue-950 " />

@@ -18,10 +18,11 @@ const Dashboard = () => {
         navigate("/login");
       } else {
         setUser(currentUser);
+        fetchData("enquiry"); // Fetch data when user logs in
       }
     });
     return () => unsubscribe();
-  }, [navigate]);
+  }, [navigate]); // Dependency me activeTab bhi add kiya
 
   // Logout function
   const handleLogout = async () => {
@@ -64,7 +65,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gray-900 text-white">
+    <div className="min-h-screen w-full bg-gray-900 pt-16 text-white">
       <div className="max-w-5xl mx-auto p-6 sm:p-8 md:p-10 lg:p-12">
         <h2 className="text-3xl font-bold text-center mb-6">Admin Dashboard</h2>
 
@@ -114,7 +115,9 @@ const Dashboard = () => {
               <tr className="bg-gray-700">
                 <th className="py-2 px-4 border border-gray-600">Name</th>
                 <th className="py-2 px-4 border border-gray-600">Number</th>
-                <th className="py-2 px-4 border border-gray-600">Email</th>
+                {activeTab === "appointments" && (
+                  <th className="py-2 px-4 border border-gray-600">Email</th>
+                )}
                 <th className="py-2 px-4 border border-gray-600">Message</th>
                 <th className="py-2 px-4 border border-gray-600">Actions</th>
               </tr>
@@ -125,7 +128,9 @@ const Dashboard = () => {
                   <tr key={item.id} className="text-center border-b border-gray-600">
                     <td className="py-2 px-4 border">{item.name}</td>
                     <td className="py-2 px-4 border">{item.number}</td>
-                    <td className="py-2 px-4 border">{item.email}</td>
+                    {activeTab === "appointments" && (
+                      <td className="py-2 px-4 border">{item.email}</td>
+                    )}
                     <td className="py-2 px-4 border">{item.message}</td>
                     <td className="py-2 px-4 border">
                       <button
@@ -139,7 +144,7 @@ const Dashboard = () => {
                 ))
               ) : (
                 <tr>
-                  <td colSpan="5" className="text-center py-4">
+                  <td colSpan={activeTab === "appointments" ? "5" : "4"} className="text-center py-4">
                     No Data Available
                   </td>
                 </tr>

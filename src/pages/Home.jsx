@@ -2,6 +2,7 @@ import React from "react";
 import ImageCorousel from "../components/ImageCorousel";
 import ContactUs from "./ContactUs";
 import DoctorProfile from "../components/DoctorProfile";
+import Testimonials from "./Testimonials";
 
 const madan_office = "https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/iretqecsb4mjnsqktmdk";
 
@@ -58,10 +59,12 @@ const Home = () => {
               हम विभिन्न प्रकार के दंत उपचार और सौंदर्य प्रक्रियाएँ प्रदान करते
               हैं, जिससे हर मरीज को उच्चतम स्तर की देखभाल मिले। हमारे क्लिनिक का
               नेतृत्व <b>डॉ. मदन निरंजन (BDS, MDS)</b> कर रहे हैं, जो एक अनुभवी{" "}
-              <b>डेंटल सर्जन और इंप्लांटोलॉजिस्ट</b> हैं। वर्तमान में, वह{" "}
+              <b>डेंटल सर्जन और इंप्लांटोलॉजिस्ट</b> हैं। 
+              {/* वर्तमान में, वह{" "}
               <b>कैरियर डेंटल कॉलेज, लखनऊ</b> में <b>असिस्टेंट प्रोफेसर</b> के
-              रूप में कार्यरत हैं। इससे पहले, उन्होंने{" "}
-              <b>राजकीय मेडिकल कॉलेज, ओरई</b> में <b>सीनियर रेजिडेंट</b> के रूप
+              रूप में कार्यरत हैं। */}
+               इससे पहले, उन्होंने{" "}
+              <b>राजकीय मेडिकल कॉलेज, उरई</b> में <b>सीनियर रेजिडेंट</b> के रूप
               में कार्य किया है। मैक्स डेंटल केयर में, हम उत्कृष्टता के प्रति
               समर्पित हैं और उन्नत उपचार प्रदान करते हैं, जिससे मरीज को आरामदायक
               और अनुकूल माहौल में एक स्वस्थ और आत्मविश्वासी मुस्कान मिल सके!
@@ -75,10 +78,14 @@ const Home = () => {
       <div>
         <DoctorProfile />
       </div>
-      {/* form */}
+        {/* form */}
       <div className="">
         <ContactUs />
       </div>
+      <div>
+        <Testimonials/>
+      </div>
+      
     </div>
   );
 };

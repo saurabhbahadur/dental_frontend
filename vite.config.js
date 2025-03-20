@@ -1,7 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  build: {
+    minify: "terser", // Use terser for minification
+    terserOptions: {
+      compress: {
+        drop_console: true, // Removes console.logs in production
+      },
+      format: {
+        comments: false, // Removes comments to reduce file size
+      },
+    },
+    chunkSizeWarningLimit: 600, // Ignore warnings for large chunk sizes
+  },
+});
