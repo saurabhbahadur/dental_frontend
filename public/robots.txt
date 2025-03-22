@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mmaxdentalcare.com/sitemap.xml
