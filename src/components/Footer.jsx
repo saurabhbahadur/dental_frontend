@@ -56,7 +56,8 @@ const Footer = () => {
               <a href="https://maps.app.goo.gl/RgWdtURWJzFsPwMu6"><img 
                 className="w-full h-[250px] scale-150 object-cover object-center" 
                 src="https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/Dental_map_mbbzj6" 
-                alt="Dental Clinic Location Map" 
+                alt="Dental Clinic Location Map"
+                loading="lazy" 
               /></a>
             </div>
           </div>
@@ -68,7 +69,7 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             &copy; {new Date().getFullYear()} Max Dental Care. All rights reserved. <br />
             Web Designed by 
-            <a href="https://saurabh-6e678.web.app/" className="hover:underline ml-1">
+            <a href="https://saurabh-6e678.web.app/" className="hover:underline ml-1 font-bold">
               Saurabh
             </a>
           </p>

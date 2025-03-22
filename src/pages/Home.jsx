@@ -36,6 +36,7 @@ const Home = () => {
               src={madan_office}
               alt="Welcome Image"
               className="w-full  shadow-lg border-4 border-blue-950"
+              loading="lazy"
             />
           </div>
 

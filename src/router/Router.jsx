@@ -9,6 +9,7 @@ import Procedure from "../pages/Procedure";
 import Dashboard from "../admin/pages/Dashboard";
 import Login from "../admin/components/Login";
 import Footer from "../components/Footer";
+import Testimonials from "../pages/Testimonials";
 
 const ProtectedRoute = ({ children }) => {
   const [user, loading] = useAuthState(auth);
@@ -25,6 +26,7 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/procedure" element={<Procedure />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/login" element={<Login />} />
 
         <Route

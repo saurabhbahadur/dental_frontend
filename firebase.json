@@ -2,17 +2,18 @@
   "hosting": {
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
     "headers": [
       {
         "source": "/optimized/**",
         "headers": [
-          { "key": "Cache-Control", "value": "max-age=31536000, public" }
+          { "key": "Cache-Control", "value": "max-age=31536000, public, immutable" }
         ]
       },
       {
         "source": "/**",
         "headers": [
-          { "key": "Cache-Control", "value": "max-age=600, public" }
+          { "key": "Cache-Control", "value": "max-age=600, public, must-revalidate" }
         ]
       }
     ],
