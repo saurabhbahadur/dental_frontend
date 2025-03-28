@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebaseconfig";
 
+// const feedBackCard_img="https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/pexels-eva-bronzini-7958171_qwotxe";
+
 const FeedbackCard = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,13 +32,13 @@ const FeedbackCard = () => {
 
   return (
     <div
-      className="h-full flex flex-col justify-center items-center p-32 rounded-2xl shadow-lg max-w-md mx-auto text-center bg-cover bg-center relative"
-      style={{ backgroundImage: "url('https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/pexels-eva-bronzini-7958171_qwotxe')" }}
+      className="h-full flex flex-col justify-center items-center px-2 py-4 rounded-2xl shadow-lg max-w-md mx-auto text-center bg-cover bg-center relative"
+      style={{ backgroundImage: "url('')" }}
     >
       {/* Overlay for readability */}
-      <div className="absolute inset-0  rounded-2xl"></div>
+      <div className="   rounded-2xl"></div>
 
-      <div className="relative z-10">
+      <div className=" z-10">
         {feedbacks.length > 0 ? (
           <>
             <p className="text-xl text-secondary_text font-semibold mb-4">"{feedbacks[currentIndex].message}"</p>
