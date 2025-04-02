@@ -32,7 +32,7 @@ const FeedbackCard = () => {
 
   return (
     <div
-      className="h-full flex flex-col justify-center items-center px-2 py-4 rounded-2xl shadow-lg max-w-md mx-auto text-center bg-cover bg-center relative"
+      className="h-full flex flex-col justify-center items-center  px-2 py-4 rounded-2xl  max-w-md mx-auto text-center bg-cover bg-center relative"
       style={{ backgroundImage: "url('')" }}
     >
       {/* Overlay for readability */}
@@ -41,7 +41,7 @@ const FeedbackCard = () => {
       <div className=" z-10">
         {feedbacks.length > 0 ? (
           <>
-            <p className="text-xl text-secondary_text font-semibold mb-4">"{feedbacks[currentIndex].message}"</p>
+            <p className="text-xl text-gray-800 font-semibold italic mb-4"> <span className="text-3xl font-serif" >"</span> {feedbacks[currentIndex].message}<span className="text-3xl font-serif" >"</span></p>
             <h4 className="text-lg font-medium text-secondary_text">- {feedbacks[currentIndex].name}</h4>
           </>
         ) : (

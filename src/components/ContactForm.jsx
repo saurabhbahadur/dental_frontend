@@ -110,7 +110,7 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className={`bg-primary_bg text-white px-6 py-2 rounded-full transition-transform duration-300 ${
+          className={`bg-primary_bg shadow-zinc-500 shadow-md text-white px-6 py-2 rounded-full transition-transform duration-300 ${
             status.loading ? "opacity-50 cursor-not-allowed" : "hover:scale-105"
           }`}
           disabled={status.loading}

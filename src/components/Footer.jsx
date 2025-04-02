@@ -77,8 +77,8 @@ const Footer = () => {
           {/* Social Media Links */}
           <div className="flex space-x-4 my-4 md:my-0">
             {[
-              { icon: <FaEnvelope />, link: "#", label: "Email" },
-              { icon: <FaInstagram />, link: "#", label: "Instagram" },
+              { icon: <FaEnvelope />, link: "mailto:MaxdentalDrmadan@gmail.com", label: "Email" },
+              { icon: <FaInstagram />, link: "https://www.instagram.com/mmaxdentalcare/", label: "Instagram" },
               { icon: <FaYoutube />, link: "#", label: "YouTube" },
               { icon: <FaFacebook />, link: "#", label: "Facebook" },
             ].map((item, index) => (

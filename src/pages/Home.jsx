@@ -25,7 +25,7 @@ const Home = () => {
 
       {/* Main Content */}
       <div className="relative mx-auto px-4 sm:px-8 md:px-16 lg:px-24 py-12 space-y-10">
-        <div className="flex flex-col p-6 md:flex-row w-full items-center rounded-lg shadow-lg bg-white bg-opacity-70 gap-8">
+        <div className="flex flex-col p-6 md:flex-row w-full items-center rounded-lg  bg-white shadow-zinc-500 shadow-xl bg-opacity-70 gap-8">
           <div className="w-full md:w-1/2">
             <img
               src={madan_office}
@@ -49,7 +49,7 @@ const Home = () => {
               <b>Welcome to Max Dental Care and Implant Centre,</b> जो सुविधाजनक रूप से स्थित है <b>राजकीय मेडिकल कालेज गेट नं. 2 के सामने, जालौन, उरई 285001</b> हम विभिन्न प्रकार के दंत उपचार और सौंदर्य प्रक्रियाएँ प्रदान करते हैं।
             </p>
             <button
-              className="px-6 py-3 bg-golden_bg text-secondary_text rounded-md font-bold shadow-md hover:bg-yellow-600 transition duration-300"
+              className="px-6 py-3 bg-golden_bg shadow-zinc-500  text-secondary_text rounded-md font-bold shadow-md hover:bg-yellow-600 transition duration-300"
               onClick={() => window.location.href = "#contact"}
             >
               अपॉइंटमेंट बुक करें

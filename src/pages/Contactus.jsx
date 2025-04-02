@@ -19,10 +19,10 @@ const ContactUs = () => {
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 w-full max-w-6xl mt-10 px-4 py-4 md:px-8">
         {/* Left Side: Contact Details */}
         <div className="flex flex-col space-y-5 text-center lg:text-left">
-          <h1 className="text-3xl font-bold text-white">
+          <h1 className="text-3xl font-bold text-white underline ">
             Book Your Appointment Now
           </h1>
-          <p className="text-white leading-relaxed text-lg">
+          <p className="text-white leading-relaxed text-lg italic">
             All consultations are booked directly with the dental clinicians.
             This allows you to visit our practice, meet the team, and discuss
             your treatment options accurately.
