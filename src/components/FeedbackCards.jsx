@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebaseconfig";
 
-// const feedBackCard_img="https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/pexels-eva-bronzini-7958171_qwotxe";
-
 const FeedbackCard = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,23 +29,21 @@ const FeedbackCard = () => {
   }, [feedbacks]);
 
   return (
-    <div
-      className="h-full flex flex-col justify-center items-center  px-2 py-4 rounded-2xl  max-w-md mx-auto text-center bg-cover bg-center relative"
-      style={{ backgroundImage: "url('')" }}
-    >
-      {/* Overlay for readability */}
-      <div className="   rounded-2xl"></div>
-
-      <div className=" z-10">
-        {feedbacks.length > 0 ? (
-          <>
-            <p className="text-xl text-gray-800 font-semibold italic mb-4"> <span className="text-3xl font-serif" >"</span> {feedbacks[currentIndex].message}<span className="text-3xl font-serif" >"</span></p>
-            <h4 className="text-lg font-medium text-secondary_text">- {feedbacks[currentIndex].name}</h4>
-          </>
-        ) : (
-          <p className="text-gray-500">Loading feedback...</p>
-        )}
-      </div>
+    <div className="w-full max-w-md p-4  mt-6 text-center">
+      {feedbacks.length > 0 ? (
+        <>
+          <p className="text-base md:text-xl text-gray-800 font-semibold italic mb-4">
+            <span className="text-2xl font-serif">"</span>
+            {feedbacks[currentIndex].message}
+            <span className="text-2xl font-serif">"</span>
+          </p>
+          <h4 className="text-sm md:text-lg font-medium text-secondary_text">
+            - {feedbacks[currentIndex].name}
+          </h4>
+        </>
+      ) : (
+        <p className="text-gray-500">Loading feedback...</p>
+      )}
     </div>
   );
 };

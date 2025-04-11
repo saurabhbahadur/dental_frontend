@@ -34,75 +34,67 @@ const FeedBackForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="h-full  flex flex-col justify-between p-6 rounded-2xl space-y-4 w-full">
-      <h3 className="text-2xl font-bold mb-4 text-secondary_text underline">Please Give Feedback</h3>
+    <div className="w-full max-w-md">
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4 w-full">
+        <h3 className="text-xl md:text-2xl font-bold text-secondary_text underline mb-4">
+          Please Give Feedback
+        </h3>
 
-      {/* Name & Number Fields */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {/* Name Field */}
-        <div className="flex flex-col ">
-          <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1">
-            Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            className="w-full p-2 border border-gray-400 bg-transparent rounded-md focus:ring-2 focus:ring-primary_bg"
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex flex-col">
+            <label htmlFor="name" className="text-sm font-medium text-gray-700 mb-1">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Enter your name"
+              className="w-full p-2 border border-gray-400 bg-transparent rounded-md focus:ring-2 focus:ring-primary_bg"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label htmlFor="number" className="text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+            <input
+              type="tel"
+              name="number"
+              id="number"
+              value={formData.number}
+              onChange={handleChange}
+              placeholder="Enter your number"
+              className="w-full p-2 border border-gray-400 bg-transparent rounded-md focus:ring-2 focus:ring-primary_bg"
+            />
+          </div>
         </div>
 
-        {/* Number Field */}
         <div className="flex flex-col">
-          <label htmlFor="number" className="text-sm font-medium text-gray-700 mb-1">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            name="number"
-            id="number"
-            value={formData.number}
+          <label htmlFor="message" className="text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            value={formData.message}
             onChange={handleChange}
-            placeholder="Enter your number"
-            className="w-full p-2 border border-gray-400 bg-transparent rounded-md focus:ring-2 focus:ring-primary_bg"
+            placeholder="Write your feedback here..."
+            className="w-full p-2 border border-gray-400 bg-transparent rounded-md focus:ring-2 focus:ring-primary_bg resize-none"
+            rows="4"
           />
         </div>
-      </div>
 
-      {/* Message Field */}
-      <div className="flex flex-col">
-        <label htmlFor="message" className="text-sm font-medium text-gray-700 mb-1">
-          Message
-        </label>
-        <textarea
-          name="message"
-          id="message"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Write your feedback here..."
-          className="w-full p-2 border border-gray-400 bg-transparent rounded-md focus:ring-2 focus:ring-primary_bg resize-none"
-          rows="4"
-        />
-      </div>
+        {status.error && <p className="text-red-500 text-sm">{status.error}</p>}
+        {status.success && <p className="text-green-500 text-sm">{status.success}</p>}
 
-      {/* Error & Success Messages */}
-      {status.error && <p className="text-red-500">{status.error}</p>}
-      {status.success && <p className="text-green-500">{status.success}</p>}
-
-      {/* Submit Button */}
-      <button
-        type="submit"
-        className={`bg-primary_bg w-full shadow-zinc-500 shadow-md text-white px-6 py-2 rounded-full transition-transform duration-300 ${
-          status.loading ? "opacity-50 cursor-not-allowed" : "hover:scale-105"
-        }`}
-        disabled={status.loading}
-      >
-        {status.loading ? "Sending..." : "Send"}
-      </button>
-    </form>
+        <button
+          type="submit"
+          className={`bg-primary_bg text-white px-6 py-2 rounded-full transition-transform duration-300 shadow-md ${
+            status.loading ? "opacity-50 cursor-not-allowed" : "hover:scale-105"
+          }`}
+          disabled={status.loading}
+        >
+          {status.loading ? "Sending..." : "Send"}
+        </button>
+      </form>
+    </div>
   );
 };
 

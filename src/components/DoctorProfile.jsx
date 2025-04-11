@@ -22,8 +22,8 @@ const doctorData = [
     name: "Dr. Rajat Suri",
     image: "https://res.cloudinary.com/dxaf36ydh/image/upload/f_auto,q_auto/v1/mMaxDentalCare/WhatsApp_Image_2025-03-30_at_12.41.40_f310174d_lwqmc7",
     degree: "BDS, MDS",
-    description: "Experienced in Orthodonitics & Orofacial.",
-    subDescription: "Ensuring comfortable and precise dental procedures.",
+    description: "Ensuring comfortable and precise dental procedures.",
+    subDescription: "Experienced in Orthodonitics & Orofacial.",
   },
 ];
 
